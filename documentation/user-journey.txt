@@ -1,0 +1,8 @@
+1. User lands on homepage ➜ Enters a project goal
+2. Consent modal appears (if not yet accepted) ➜ Confirm
+3. Agent starts asking strategic PM questions ➜ Loop of Q&A
+4. Memory builds (responses saved in DB/localStorage)
+5. Agent summarizes project in plain language
+6. User confirms or edits summary
+7. App generates and downloads PDF
+8. (Optional) Agent offers to start new project

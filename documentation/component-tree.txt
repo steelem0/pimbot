@@ -1,0 +1,26 @@
+/pages
+  index.vue          ← UI to start the convo
+
+/components
+  ConsentModal.vue   ← Privacy + consent UX
+  StepDisplay.vue    ← Q&A step with agent
+  SummaryCard.vue    ← Final summary preview
+  PDFButton.vue      ← Export trigger
+
+/composables
+  useAgentFlow.ts    ← Full convo flow
+
+/server
+  /api
+    submitSession.ts ← Save session
+    generatePdf.ts   ← Generate PDF
+  /utils
+    groq.ts          ← Call to Groq API
+
+/assets/css
+  theme.css          ← Custom colors & text rules
+
+prisma/schema.prisma ← Session model
+
+tailwind.config.ts   ← Dark mode + token config
+nuxt.config.ts       ← CSS imports + modules

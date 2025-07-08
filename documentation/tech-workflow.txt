@@ -1,0 +1,52 @@
+🔧 2. TECH WORKFLOW
+📍 Page: index.vue
+Renders input field and button
+
+Triggers useAgentFlow().start(goal)
+
+Shows Q&A thread as steps progress
+
+🧩 Composable: useAgentFlow.ts
+Handles:
+
+🧠 Memory (goal, responses, messages)
+
+🔁 Loop logic (Groq API call ➜ next question)
+
+✍️ Summary generation
+
+💾 Option to save to DB (/api/submitSession)
+
+📄 Option to send to /api/generatePdf
+
+🛑 Consent Modal
+New file: components/ConsentModal.vue
+
+Shows once per session (persisted with cookie/localStorage)
+
+Blocks interaction until accepted
+
+Flags the session as consented: true
+
+📬 Groq Agent Calls
+New file: server/utils/groq.ts
+
+Handles message array and returns narrative + options
+
+You might structure prompts like ReAct or ReWOO (we’ll decide)
+
+🧾 DB Save
+server/api/submitSession.post.ts
+
+Saves goal, responses, consented, etc.
+
+Adds timestamp for future analytics or exports
+
+📝 PDF Generation
+New: server/api/generatePdf.post.ts
+
+Accepts session ID or full content
+
+Uses html-pdf, puppeteer, or jsPDF
+
+Returns PDF buffer to frontend for download

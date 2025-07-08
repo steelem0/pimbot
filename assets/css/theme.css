@@ -1,0 +1,63 @@
+:root {
+  --ui-color-primary-500: #7F5AF0;
+  --ui-color-secondary-500: #5C3DCC;
+  --ui-color-success-500: #3CCF4E;
+  --ui-color-info-500: #0EA5E9;
+  --ui-color-warning-500: #FCA311;
+  --ui-color-error-500: #EF4444;
+
+  --ui-color-text-base: #1A1A1A;
+  --ui-color-text-muted: #6B7280;
+  --ui-color-text-invert: #FFFFFF;
+
+  --ui-color-bg-body: #F8F9FC;
+  --ui-color-bg-surface: #FFFFFF;
+
+  --ui-primary: var(--ui-color-primary-500);
+  --ui-secondary: var(--ui-color-secondary-500);
+  --ui-success: var(--ui-color-success-500);
+  --ui-info: var(--ui-color-info-500);
+  --ui-warning: var(--ui-color-warning-500);
+  --ui-error: var(--ui-color-error-500);
+}
+
+.dark {
+  --ui-color-primary-400: #9B7DF9;
+  --ui-color-secondary-400: #7A5EE8;
+  --ui-color-success-400: #66E676;
+  --ui-color-info-400: #38BDF8;
+  --ui-color-warning-400: #FDBA74;
+  --ui-color-error-400: #F87171;
+
+  --ui-color-text-base: #F3F4F6;
+  --ui-color-text-muted: #c2cbdc;
+  --ui-color-text-invert: #000000;
+
+  --ui-color-bg-body: #111827;
+  --ui-color-bg-surface: #1F2937;
+  
+  --ui-primary: var(--ui-color-primary-400);
+  --ui-secondary: var(--ui-color-secondary-400);
+  --ui-success: var(--ui-color-success-400);
+  --ui-info: var(--ui-color-info-400);
+  --ui-warning: var(--ui-color-warning-400);
+  --ui-error: var(--ui-color-error-400);
+}
+body {
+  background-color: var(--ui-color-bg-body);
+  color: var(--ui-color-text-base);
+}
+input {
+  color: var(--ui-color-bg-body);
+background-color: var(--ui-color-text-base);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--ui-color-text-base);
+  font-weight: 700;
+}
+
+p, span, label, li, ul, ol, a {
+  color: var(--ui-color-text-muted);
+  line-height: 1.6;
+}

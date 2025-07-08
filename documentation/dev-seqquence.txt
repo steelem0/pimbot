@@ -1,0 +1,11 @@
+🔜 Suggested Development Sequence
+Step	Feature	Files Affected
+✅	Theme + Tailwind + Layout	theme.css, tailwind.config.ts, app.vue
+✅	Project goal form	index.vue
+⏭️	Consent modal (localStorage)	ConsentModal.vue, index.vue
+⏭️	Groq agent call	groq.ts, useAgentFlow.ts
+⏭️	Display step responses	StepDisplay.vue, index.vue
+⏭️	Save session to DB	submitSession.ts, useAgentFlow.ts
+⏭️	Generate summary	useAgentFlow.ts
+⏭️	Export to PDF	generatePdf.ts, PDFButton.vue
+
