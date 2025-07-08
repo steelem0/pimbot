@@ -1,14 +1,15 @@
-import { ChatGroq } from "@langchain/community/chat_models/groq"
-import { HumanMessage, SystemMessage } from "@langchain/core/messages"
-import { RunnableSequence } from "@langchain/core/runnables"
+import { ChatGroq } from "@langchain/groq";
+import { RunnableSequence } from "@langchain/core/runnables";
+import { HumanMessage, SystemMessage } from "@langchain/core/messages";
+
 
 // Init the Groq model
 const chatModel = new ChatGroq({
   temperature: 0.7,
-  model: 'llama3-8b-8192', // not `modelName` in Groq wrapper
+  model: 'llama3-8b-8192',  
   apiKey: process.env.GROQ_API_KEY,
 })
-
+console.log('Groq ready:', !!chatModel)
 // Build a simple prompt pipeline
 const promptChain = RunnableSequence.from([
   (input: { goal: string }) => [
