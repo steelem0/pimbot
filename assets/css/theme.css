@@ -47,9 +47,9 @@ body {
   background-color: var(--ui-color-bg-body);
   color: var(--ui-color-text-base);
 }
-input {
+input, textarea{
   color: var(--ui-color-bg-body);
-background-color: var(--ui-color-text-base);
+  background-color: var(--ui-color-text-base);
 }
 
 h1, h2, h3, h4, h5, h6 {
