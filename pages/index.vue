@@ -25,6 +25,16 @@
             </div>
             </form>
 
+            <div>
+                <div v-if="memory.goal" class="mt-4 p-4 rounded">
+                <h2 class="text-lg font-bold">🧠 AI Agent Memory</h2>
+                  <p><strong>Goal:</strong> {{ memory.summary }}</p>
+                <p><strong>Goal:</strong> {{ memory.goal }}</p>
+                <p><strong>Scope:</strong> {{ memory.scope }}</p>
+                <p><strong>Constraints:</strong> {{ memory.constraints?.join(', ') }}</p>
+                <p><strong>Features:</strong> {{ memory.features?.join(', ') }}</p>
+              </div>
+            </div>
       </section>
 
       <!-- Right Column: Timeline -->

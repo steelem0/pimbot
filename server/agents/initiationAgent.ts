@@ -40,7 +40,7 @@ const prompt = RunnableSequence.from([
   const response = await prompt.invoke({ goal })
    console.log('✏️', response)
     return {
-    summary: response.content.trim(),
+    summary: response.content,
     metadata: response.response_metadata // optional, but cute if you wanna track usage
   }
 }

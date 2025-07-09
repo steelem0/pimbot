@@ -33,5 +33,8 @@ model ProjectMemory {
   testing         String?
   deployment      String?
   serviceDelivery String?
+  metadata        Json?
+  summary         String?   
+  createdAt       DateTime @default(now())
   updatedAt       DateTime @updatedAt
 }

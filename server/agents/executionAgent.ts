@@ -18,5 +18,5 @@ const prompt = RunnableSequence.from([
 
 export async function runExecutionAgent(memory: any) {
   const result = await prompt.invoke(memory)
-  return JSON.parse(result.content)
+    return result.content
 }
