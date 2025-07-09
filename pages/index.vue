@@ -41,20 +41,17 @@
 <script setup lang="ts">
 import type { TimelineItem } from '@nuxt/ui'
 const goal = ref('');
-const { start } = useAgentFlow();
+const { start, memory, currentPhase } = useAgentFlow()
 
 async function startFlow() {
-  if (!goal.value) return;
-
-  const res = await $fetch('/api/projectAgent', {
-    method: 'POST',
-    body: { goal: goal.value }
-  })
-
-  console.log('🧠 AI Response:', res.response)
-  // You can now push this to your UI steps, memory, whatever!
+  if (!goal.value.trim()) return
+  await start(goal.value)
+  console.log('🧠 Memory after initiation:', memory.value)
 }
 
+function nextPhase() {
+ // next()
+}
 
 const items = ref<TimelineItem[]>([
   {
